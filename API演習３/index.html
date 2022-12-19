@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>react</title>
+  <meta charset="UTF-8">
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+ </head>
+ <body>
+   <h1>React Test</h1>
+   <div class="joke-sentence">Joke sentence</div>
+   <script type="text/babel">
+    let dom = document.querySelector('.joke-sentence');
+
+    function Joke(props){
+      return <p>{props.name}</p>;
+    }
+
+    let element = (
+     <div>
+       <Joke name="私は私の息子が醜いと言っているのではありません...しかし、ハロウィーンに彼は隣人にテレビを切るように言いに行きました、そして彼らは彼にいくつかのキャンディーを与えました。" />
+       <Joke name="サンタさんの好きな歌手は誰ですか?--エルヴィス-プレスリーです!" />   
+       <Joke name="なぜサンタは煙突を下るのですか?--それは彼をなだめるから!" />
+       </div>
+   );
+   ReactDOM.render(element, dom);
+   </script>
+ </body>
+</html>
